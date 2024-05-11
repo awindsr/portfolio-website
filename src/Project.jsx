@@ -122,7 +122,9 @@ function ProjectItem({ index, title, stack, link, year, image, description }) {
     >
       <div className="md:h-[10rem] w-screen h-auto bg-gray-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-500 shadow-md flex md:flex-row flex-col items-center justify-between space-x-4 p-4">
         <div>
-          <span className="text-gray-500 text-xl">{index}</span>
+        <span className="text-gray-500 text-xl">{index <= 9 ? `${index}` : index.slice(-2)}</span>
+
+
           <div className="flex flex-col space-y-3">
             <h2 className="font-sarabun text-2xl font-bold">{title}</h2>
             <div className="flex text-gray-500 space-x-3">
