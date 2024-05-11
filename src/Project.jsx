@@ -5,15 +5,23 @@ export function Project() {
   const stacks = [
     {
       "title": "Todo App ",
-      "stack": ["React", "Tailwind CSS", "Vite", "TypeScript"],
+      "stack": ["ReactJS", "Tailwind CSS", "Vite", "TypeScript"],
       "link": "https://github.com/awindsr/Todo-api",
       "year": "2024",
       "image": "",
       "description": "A todo app made using µLearn's Backend api using ReactJS and Typescript"
     },
     {
+      "title": "Website for Musify App ",
+      "stack": ["ReactJS"],
+      "link": "https://musifyadr.netlify.app/",
+      "year": "2024",
+      "image": "",
+      "description": "A website made using ReactJS for musify app"
+    },
+    {
       "title": "Website for ByteGeist",
-      "stack": ["React", "Tailwind CSS"],
+      "stack": ["ReactJS", "Tailwind CSS"],
       "link": "https://bytegeistdev.netlify.app/",
       "year": "2024",
       "image": "",
@@ -21,7 +29,7 @@ export function Project() {
     },
     {
       "title": "Electrical Communication Students Association - SJCET Website",
-      "stack": ["React", "jQuery"],
+      "stack": ["ReactJS", "jQuery"],
       "link": "https://ecsa.sjcetpalai.ac.in/",
       "year": "2023",
       "image": "",
