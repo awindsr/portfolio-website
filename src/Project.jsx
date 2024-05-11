@@ -1,31 +1,86 @@
 import { useState } from "react";
-import "./Project.css"
+import "./Project.css";
 
 export function Project() {
   const stacks = [
     {
-      title: "Portfolio Website",
-      stack: ["React", "Tailwind CSS", "Node.js", "Express"],
-      link: "https://awindsr.github.io",
-      year: "2023",
-      image: "projectone.png"
+      "title": "Website for ByteGeist",
+      "stack": ["React", "Tailwind CSS"],
+      "link": "https://bytegeistdev.netlify.app/",
+      "year": "2024",
+      "image": "",
+      "description": "Modern website for ByteGeist with React and Tailwind CSS."
     },
     {
-      title: "E-commerce Platform",
-      stack: ["React", "Redux", "Firebase", "Stripe"],
-      link: "https://example.com/ecommerce",
-      year: "2023",
+      "title": "Electrical Communication Students Association - SJCET Website",
+      "stack": ["React", "jQuery"],
+      "link": "https://ecsa.sjcetpalai.ac.in/",
+      "year": "2023",
+      "image": "",
+      "description": "Dynamic website for SJCET ECSA built with React and jQuery."
     },
     {
-      title: "Social Media App",
-      stack: ["React", "MongoDB", "Express", "Node.js"],
-      link: "https://example.com/social-media",
-      year: "2023",
+      "title": "Ecommerce website UI",
+      "stack": ["Figma"],
+      "link": "https://www.figma.com/proto/UhnrbYIbSmff5ivD8YaXQk/Vanchi?page-id=0%3A1&type=design&node-id=68-39&viewport=1851%2C-316%2C0.21&t=WknXvck9XQ0mmHih-1&scaling=min-zoom&mode=design",
+      "year": "2023",
+      "image": "",
+      "description": "UI design for an ecommerce website crafted in Figma."
     },
-  ];
+    {
+      "title": "Discord ScoreBoard Bot For µLearn Campus Discord",
+      "stack": ["Python"],
+      "link": "https://github.com/awindsr/Discord-Scoreboard-Bot",
+      "year": "2024",
+      "image": "",
+      "description": "µLearn Discord bot for scoreboard and community engagement."
+    },
+    {
+      "title": "Website for a handicraft Company",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "link": "https://awindsr.github.io/PCW/",
+      "year": "2022",
+      "image": "",
+      "description": "Handicraft Company's website with HTML, CSS, and JavaScript."
+    },
+    {
+      "title": "Portfolio Website",
+      "stack": ["Figma", "HTML", "CSS", "JS"],
+      "link": "https://awindsr.github.io/",
+      "year": "2023",
+      "image": "",
+      "description": "Personal portfolio website showcasing projects and skills."
+    },
+    {
+      "title": "Telegram Chatbot to Collect Student Data into Google Sheets",
+      "stack": ["Python"],
+      "link": "https://github.com/awindsr/Gsheet-TG-Bot",
+      "year": "2022",
+      "image": "",
+      "description": "Telegram bot to collect student data into Google Sheets."
+    },
+    {
+      "title": "Twitter Sentiment Analysis",
+      "stack": ["Python", "NumPy", "Matplotlib", "Pandas"],
+      "link": "https://github.com/awindsr/Twitter-Sentiment-Analysis",
+      "year": "2022",
+      "image": "",
+      "description": "Program for analyzing sentiment distribution of hate tweets."
+    },
+    {
+      "title": "Expense Manager Telegram Chatbot",
+      "stack": ["Python"],
+      "link": "https://github.com/awindsr/Expense-Manager-Telegram-bot",
+      "year": "2022",
+      "image": "",
+      "description": "Telegram bot for seamless expense management and tracking."
+    }
+  ]
+  
 
   return (
-    <div className="projectsContainer h-[100%] w-[100%] text-white font-nunito">
+    <div className="projectsContainer h-auto md:h-[100%] w-[100%] text-white font-nunito p-[1rem] z-99 overflow-y-scroll">
+      <h1 className="font-sarabun font-bold text-4xl md:text-6xl mb-5">My Projects</h1>
       {stacks.map((stack, index) => (
         <ProjectItem
           key={index}
@@ -34,17 +89,22 @@ export function Project() {
           stack={stack.stack}
           link={stack.link}
           year={stack.year}
-          image={stack.image} />
+          image={stack.image}
+          description={stack.description}
+        />
       ))}
     </div>
   );
 }
-function ProjectItem({ index, title, stack, link, year, image }) {
+function ProjectItem({ index, title, stack, link, year, image, description }) {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className="projectItemOne m-5 flex justify-center items-center" onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}>
-      <div className="h-[10rem] w-[60rem] bg-gray-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-500 shadow-md flex items-center justify-between space-x-4 p-4">
+    <div
+      className="projectItemOne  flex justify-center items-center p-4"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      <div className="md:h-[10rem] w-screen h-auto bg-gray-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-500 shadow-md flex md:flex-row flex-col items-center justify-between space-x-4 p-4">
         <div>
           <span className="text-gray-500 text-xl">{index}</span>
           <div className="flex flex-col space-y-3">
@@ -53,17 +113,20 @@ function ProjectItem({ index, title, stack, link, year, image }) {
               {stack.map((item, stackIndex) => (
                 <div
                   key={stackIndex}
-                  className="border border-gray-500 rounded-full px-3 py-1"
+                  className="border border-gray-500 rounded-full px-3 py-1 flex items-center md:text-[1rem] text-[.6rem]"
                 >
                   {item}
                 </div>
               ))}
             </div>
           </div>
-
         </div>
-        <div className={`projectPhoto max-w-[15rem] max-h-[15rem] ${isVisible ? 'visible' : ''}`}>
-          <img src={image} alt={title} className=" rounded-lg"></img>
+        <div
+          className={`projectPhoto max-w-[15rem] mt-3 mb-3 md:m-0 max-h-[15rem] ${
+            isVisible ? "visible" : ""
+          }`}
+        >
+          <p>{description}</p>
         </div>
         <div className="space-x-1">
           <span className="projectYear">{year}</span>

@@ -8,7 +8,7 @@
     margin: auto;
     /* background-color: #D34444; */
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
   }
   .m-scroll__title {
     display: flex;
@@ -33,10 +33,12 @@
     font-size: 20rem;
     color: #2121215d;
     transition: all 2s ease;
+    z-index: 2;
   }
   .m-scroll__title a {
     text-decoration: none;
-    color: #3b3b3b84;
+    color: #2121215d;
+    z-index: 2;
   }
   .m-scroll__title a:hover {
     -webkit-text-stroke: 1px white;
@@ -62,3 +64,24 @@
     }
   }
   
+  .bokeh-circle {
+    width: 400px;
+    height: 400px;
+    background-color: #4CAF50; /* Green color */
+    border-radius: 50%; /* Ensure it's a circle */
+    opacity: 0.2; /* Initial opacity */
+    animation: bokeh-animation 3s infinite; /* Apply animation infinitely */
+    filter: blur(70px); /* Apply blur effect */
+    backdrop-filter: blur(70px); /* Apply additional blur for bokeh effect */
+    z-index: 1;
+  }
+  
+  @keyframes bokeh-animation {
+    0% { opacity: 0.2; } /* Initial opacity */
+    50% { opacity: 0.4; } /* Dimmed opacity */
+    100% { opacity: 0.2; } /* Brightened opacity */
+  }
+  
+  .herotext {
+    z-index: 99;
+  }

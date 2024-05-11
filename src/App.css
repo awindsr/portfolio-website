@@ -1,20 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-.bokeh-circle {
-  width: 400px;
-  height: 400px;
-  background-color: #4CAF50; /* Green color */
-  border-radius: 50%; /* Ensure it's a circle */
-  opacity: 0.5; /* Initial opacity */
-  animation: bokeh-animation 3s infinite; /* Apply animation infinitely */
-  filter: blur(70px); /* Apply blur effect */
-  backdrop-filter: blur(70px); /* Apply additional blur for bokeh effect */
-}
-
-@keyframes bokeh-animation {
-  0% { opacity: 0.5; } /* Initial opacity */
-  50% { opacity: 0.3; } /* Dimmed opacity */
-  100% { opacity: 0.5; } /* Brightened opacity */
-}
 
 
 

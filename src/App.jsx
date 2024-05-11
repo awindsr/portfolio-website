@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import anime from "animejs";
 import "./App.css";
 import { Hero } from "./Hero";
 import { Project } from "./Project";
@@ -8,15 +7,23 @@ import { Contact } from "./Contact";
 
 function App() {
   return (
-    <div className="body-container bg-[#0f0f0f] h-screen max-w-screen p-1 relative max-h-screen border border-gray-400">
-      <div className="bokeh-circle absolute z-10 top-[12rem] left-[3rem]"></div>
-      <div className="bokeh-circle absolute z-10 right-[8rem] top-[5rem]"></div>
-      <div className="border border-gray-400 bg-[#0f0f0f] h-[99%] w-[100%] p-6 relative overflow-y-scroll">
-        <Hero />
-        <Project />
-        <AboutMe />
-        <Contact />
-        <Footer />
+    <div className="relative">
+      {/* Bokeh Circles */}
+      
+
+  
+      {/* Body Container */}
+      <div className="body-container bg-[#0f0f0f] h-screen w-screen p-1 relative h-screen border border-gray-400 z-0">
+        {/* Content */}
+        <div className="bokeh-circle absolute z-2  top-[12rem] left-[3rem]"></div>
+      <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
+        <div className="border border-gray-400  h-[99%] w-[100%] absolute overflow-y-scroll z-10">
+          <Hero />
+          <Project />
+          <AboutMe />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </div>
   );
@@ -24,7 +31,7 @@ function App() {
 
 function Footer() {
   return (
-    <div className="bg-black z-10">
+    <div className="bg-black z-3">
       <footer className=" w-[100%]  text-white p-5">
         <div className="flex flex-col items-center justify-center space-y-4">
           <h2 className="font-poppins text-4xl font-bold">Connect with Me</h2>
@@ -54,3 +61,5 @@ function Footer() {
   );
 }
 export default App;
+
+
