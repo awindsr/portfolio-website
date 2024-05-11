@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute w-[100%] h-[100%] top-0">
         <MScroll />
       </div>
-      <div className="herotext flex flex-col items-center justify-center w-[100%] h-[100%] md:max-w-screen ">
+      <div className="herotext flex flex-col items-center justify-center w-[100%] h-[100%] md:max-w-screen z-15">
         <h1 className="text-white text-[3rem] font-regular font-sarabun md:text-[7rem] " style={{ lineHeight: '.9' }}>
           Hi, I'm Awin, a<br></br>
           <span className="text-[#8fff86]">web developer,</span>
@@ -23,7 +23,7 @@ export function Hero() {
 }
 function MScroll() {
   return (
-    <div className="m-scroll">
+    <div className="m-scroll z-3">
       <div className="m-scroll__title">
         <div>
           <h1>WEB DEVELOPER UI/UX DEVELOPER&nbsp;</h1>

@@ -6,17 +6,23 @@ import { AboutMe } from "./AboutMe";
 import { Contact } from "./Contact";
 
 function App() {
+  useEffect(() => {
+    // Set document title
+    document.title = "Awindsr Web Developer";
+
+    // Set favicon
+    const favicon = document.getElementById("favicon");
+    favicon.href = "./public/logo.ico";
+  }, []);
   return (
     <div className="relative">
       {/* Bokeh Circles */}
-      
 
-  
       {/* Body Container */}
       <div className="body-container bg-[#0f0f0f] h-screen w-screen p-1 relative h-screen border border-gray-400 z-0">
         {/* Content */}
         <div className="bokeh-circle absolute z-2  top-[12rem] left-[3rem]"></div>
-      <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
+        <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
         <div className="border border-gray-400  h-[99%] w-[100%] absolute overflow-y-scroll z-10">
           <Hero />
           <Project />
@@ -46,10 +52,10 @@ function Footer() {
           </div>
           <div className="flex space-x-3">
             <a href="#">
-             <img src="github-mark-white.svg" className="h-[2rem] w-[2rem]"/>
+              <img src="github-mark-white.svg" className="h-[2rem] w-[2rem]" />
             </a>
             <a href="#">
-            <img src="linkedin.png" className="h-[2rem] w-[2rem]"/>
+              <img src="linkedin.png" className="h-[2rem] w-[2rem]" />
             </a>
           </div>
           <div>
@@ -61,5 +67,3 @@ function Footer() {
   );
 }
 export default App;
-
-
