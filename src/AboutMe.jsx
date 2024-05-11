@@ -18,7 +18,7 @@ export function AboutMe() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center space-y-5">
-        <div className="flex space-x-5">
+        <div className="flex flex-col sm:flex-row sm:space-x-5 sm:space-y-[-4] space-y-4">
           <StatItem value="4+" label="Coding experience" />
           <StatItem value="3+" label="Developing Websites" />
         </div>
@@ -31,10 +31,10 @@ export function AboutMe() {
 
 const StatItem = ({ value, label }) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="">
       <h3 className="text-8xl font-bold font-sarabun text-green-400 text-center">
         {value}<br />
-        <span className="text-white text-2xl">{label}</span>
+        <span className="text-white text-xl ">{label}</span>
       </h3>
     </div>
   );

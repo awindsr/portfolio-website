@@ -15,15 +15,16 @@ function App() {
     favicon.href = "./public/logo.ico";
   }, []);
   return (
-    <div className="relative">
+    <div className="relative h-screen max-w-screen">
       {/* Bokeh Circles */}
 
       {/* Body Container */}
-      <div className="body-container bg-[#0f0f0f] h-screen w-screen p-1 relative h-screen border border-gray-400 z-0">
+      <div className="body-container bg-[#0f0f0f] p-1 relative h-screen border border-gray-400 z-0">
         {/* Content */}
         <div className="bokeh-circle absolute z-2  top-[12rem] left-[3rem]"></div>
         <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
-        <div className="border border-gray-400  h-[99%] w-[100%] absolute overflow-y-scroll z-10">
+        {/* <div className="border border-gray-400  h-[99%] max-w-[21.9rem] absolute overflow-y-scroll z-10"> */}
+        <div className="border border-gray-400  h-[99%] -w-[screen]  overflow-y-scroll z-10">
           <Hero />
           <Project />
           <AboutMe />
@@ -34,34 +35,38 @@ function App() {
     </div>
   );
 }
-
 function Footer() {
   return (
-    <div className="bg-black z-3">
-      <footer className=" w-[100%]  text-white p-5">
-        <div className="flex flex-col items-center justify-center space-y-4">
-          <h2 className="font-poppins text-4xl font-bold">Connect with Me</h2>
-          <div className="text-center">
-            <p className="text-xl">
-              Awindsr@gmail.com{" "}
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </p>
-            <p>
-              +9188684115 <i class="fa fa-phone" aria-hidden="true"></i>
-            </p>
+    <div className="bg-black z-3 max-w-screen">
+      <footer className=" w-[100%]  text-white p-2">
+        <div className="flex items-center justify-between sm:justify-around space-y-4 p-5">
+          <div className="">
+            <h2 className="font-poppins text-[.9rem] sm:text-[2rem] font-bold">
+              Connect with Me
+            </h2>
+            <div className="text-left">
+              <p className="text-[.8rem]">
+                Awindsr@gmail.com{" "}
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </p>
+              <p className="text-[.8rem] ">
+                +9188684115 <i class="fa fa-phone" aria-hidden="true"></i>
+              </p>
+            </div>
           </div>
           <div className="flex space-x-3">
             <a href="#">
-              <img src="github-mark-white.svg" className="h-[2rem] w-[2rem]" />
+              <img src="github-mark-white.svg" className="h-[1.3rem] w-[1.3rem]" />
             </a>
             <a href="#">
-              <img src="linkedin.png" className="h-[2rem] w-[2rem]" />
+              <img src="linkedin.png" className="h-[1.3rem] w-[1.3rem]" />
             </a>
           </div>
-          <div>
-            <p>Designed and Developed by Awindsr</p>
-          </div>
+          
         </div>
+        <div className="text-center text-[.8rem]">
+            <p>Designed and Developed by <span className="text-[#8fff86]">Awindsr</span></p>
+          </div>
       </footer>
     </div>
   );
