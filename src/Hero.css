@@ -1,0 +1,64 @@
+/* hero */
+
+.m-scroll {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* background-color: #D34444; */
+    overflow: hidden;
+    z-index: 1;
+  }
+  .m-scroll__title {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    transform: scale(2);
+    transition: all 1s ease;
+  }
+  .m-scroll__title > div {
+    display: flex;
+    -webkit-animation: scrollText 80s infinite linear;
+            animation: scrollText 80s infinite linear;
+  }
+  .m-scroll__title h1 {
+    margin: 0;
+    font-size: 20rem;
+    color: #2121215d;
+    transition: all 2s ease;
+  }
+  .m-scroll__title a {
+    text-decoration: none;
+    color: #3b3b3b84;
+  }
+  .m-scroll__title a:hover {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+  /*div:hover {
+    animation-play-state: paused;
+  }*/
+  @-webkit-keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
