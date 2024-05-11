@@ -4,6 +4,14 @@ import "./Project.css";
 export function Project() {
   const stacks = [
     {
+      "title": "Todo App ",
+      "stack": ["React", "Tailwind CSS", "Vite", "TypeScript"],
+      "link": "https://github.com/awindsr/Todo-api",
+      "year": "2024",
+      "image": "",
+      "description": "A todo app made using µLearn's Backend api using ReactJS and Typescript"
+    },
+    {
       "title": "Website for ByteGeist",
       "stack": ["React", "Tailwind CSS"],
       "link": "https://bytegeistdev.netlify.app/",
