@@ -55,6 +55,7 @@ export function AboutMe() {
 }
 
 const StatItem = ({ value, label }) => {
+  
   return (
     <div className="">
       <h3 className="text-8xl font-bold font-sarabun text-green-400 text-center">
@@ -68,81 +69,7 @@ const StatItem = ({ value, label }) => {
 
 
 
-function Stats() {
 
-  useEffect(() => {
-    $.fn.jQuerySimpleCounter = function (options) {
-      var settings = $.extend(
-        {
-          start: 0,
-          end: 100,
-          easing: "swing",
-          complete: "",
-        },
-        options
-      );
-
-      var thisElement = $(this);
-
-      $({ count: settings.start }).animate(
-        { count: settings.end },
-        {
-          duration: settings.duration,
-          easing: settings.easing,
-          step: function () {
-            var mathCount = Math.ceil(this.count);
-            thisElement.text(mathCount);
-          },
-          complete: settings.complete,
-        }
-      );
-    };
-
-    $("#number1").jQuerySimpleCounter({ end: 345, duration: 3000 });
-    $("#number2").jQuerySimpleCounter({ end: 946, duration: 3700 });
-    $("#number3").jQuerySimpleCounter({ end: 81, duration: 3100 });
-    $("#number4").jQuerySimpleCounter({ end: 16, duration: 3450 });
-    $("#number5").jQuerySimpleCounter({ end: 472, duration: 3300 });
-    $("#number6").jQuerySimpleCounter({ end: 224, duration: 2175 });
-  }, []);
-
-  return (
-    <div className="container text-white sm:flex-row text-[1.4rem] items-center justify-center">
-      <div className="counter flex flex-col sm:flex-row justify-around items-center">
-        <div className="item">
-          <i className="fas fa-laptop"></i>
-          <p id="number1" className="number">0</p>
-          <p className="label">Hours coding</p>
-        </div>
-        <div className="item">
-          <i className="fas fa-camera"></i>
-          <p id="number2" className="number">0</p>
-          <p className="label">Photos taken</p>
-        </div>
-        <div className="item">
-          <i className="fas fa-car"></i>
-          <p id="number3" className="number">0</p>
-          <p className="label">Hours commuting</p>
-        </div>
-        <div className="item">
-          <i className="fas fa-briefcase"></i>
-          <p id="number4" className="number">0</p>
-          <p className="label">Projects done</p>
-        </div>
-        <div className="item">
-          <i className="fab fa-twitter"></i>
-          <p id="number5" className="number">0</p>
-          <p className="label">Tweets sent</p>
-        </div>
-        <div className="item">
-          <i className="fas fa-coffee"></i>
-          <p id="number6" className="number">0</p>
-          <p className="label">Cups of coffee</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 

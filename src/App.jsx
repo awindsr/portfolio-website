@@ -16,16 +16,15 @@ function App() {
     favicon.href = "/logo.ico";
   }, []);
   return (
-    <div className="relative h-screen max-w-screen flex">
+    <div className="relative h-screen max-w-screen flex z-1">
       {/* Bokeh Circles */}
 
       {/* Body Container */}
-      <div className="body-container bg-[#0f0f0f] p-1 relative h-screen border border-gray-400 z-0">
+      <div className="body-container bg-[#0f0f0f] p-1 relative h-screen border border-gray-400 ">
         {/* Content */}
-        <div className="bokeh-circle absolute z-2  top-[12rem] left-[3rem]"></div>
-        <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
+        
         {/* <div className="border border-gray-400  h-[99%] max-w-[21.9rem] absolute overflow-y-scroll z-10"> */}
-        <div className="border border-gray-400  h-[99%] w-[screen] flex-1 overflow-y-scroll z-10">
+        <div className="border border-gray-400  h-[99%] w-[screen] flex-1 overflow-y-scroll z-2">
           <Hero />
           <Project />
           <AboutMe />

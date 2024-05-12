@@ -95,8 +95,8 @@ export function Project() {
   
 
   return (
-    <div className="projectsContainer  text-white font-nunito p-[1rem] z-99 block overflow-y-auto">
-      <h1 className="font-sarabun font-bold text-4xl md:text-6xl mb-5">My Projects</h1>
+    <div className="projectsContainer bg-[#0f0f0f] text-white font-nunito p-[1rem] block overflow-y-auto flex-col items-center z-3">
+      <h1 className="font-sarabun font-bold text-4xl md:text-6xl mb-5 ml-3">My Projects</h1>
       {stacks.map((stack, index) => (
         <ProjectItem
           key={index}
