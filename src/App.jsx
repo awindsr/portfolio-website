@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 import { Project } from "./Project";
 import { AboutMe } from "./AboutMe";
 import { Contact } from "./Contact";
+import { HorizontalSlider } from "./HorizontalSlider";
 
 function App() {
   useEffect(() => {
@@ -12,10 +13,10 @@ function App() {
 
     // Set favicon
     const favicon = document.getElementById("favicon");
-    favicon.href = "./public/logo.ico";
+    favicon.href = "/logo.ico";
   }, []);
   return (
-    <div className="relative h-screen max-w-screen">
+    <div className="relative h-screen max-w-screen flex">
       {/* Bokeh Circles */}
 
       {/* Body Container */}
@@ -24,10 +25,11 @@ function App() {
         <div className="bokeh-circle absolute z-2  top-[12rem] left-[3rem]"></div>
         <div className="bokeh-circle absolute z-2 right-[8rem] top-[5rem]"></div>
         {/* <div className="border border-gray-400  h-[99%] max-w-[21.9rem] absolute overflow-y-scroll z-10"> */}
-        <div className="border border-gray-400  h-[99%] -w-[screen]  overflow-y-scroll z-10">
+        <div className="border border-gray-400  h-[99%] w-[screen] flex-1 overflow-y-scroll z-10">
           <Hero />
           <Project />
           <AboutMe />
+          <HorizontalSlider/>
           <Contact />
           <Footer />
         </div>

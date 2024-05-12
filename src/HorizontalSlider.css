@@ -1,0 +1,10 @@
+
+.slider li {
+    padding:0 10px;
+    list-style: none;
+}
+.slider img {
+
+    height: 60px !important;
+    width: 60px !important;
+}

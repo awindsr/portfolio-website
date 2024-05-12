@@ -95,7 +95,7 @@ export function Project() {
   
 
   return (
-    <div className="projectsContainer h-auto md:h-[100%]  text-white font-nunito p-[1rem] z-99 overflow-y-auto">
+    <div className="projectsContainer  text-white font-nunito p-[1rem] z-99 block overflow-y-auto">
       <h1 className="font-sarabun font-bold text-4xl md:text-6xl mb-5">My Projects</h1>
       {stacks.map((stack, index) => (
         <ProjectItem
@@ -112,6 +112,7 @@ export function Project() {
     </div>
   );
 }
+
 function ProjectItem({ index, title, stack, link, year, image, description }) {
   const [isVisible, setIsVisible] = useState(false);
   return (
@@ -120,7 +121,7 @@ function ProjectItem({ index, title, stack, link, year, image, description }) {
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >
-      <div className="md:h-[10rem] md:w-3/4 h-auto bg-gray-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-500 shadow-md flex md:flex-row flex-col items-center justify-between space-x-4 p-4">
+      <div className="md:h-[10rem] w-full md:w-full h-auto bg-gray-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-500 shadow-md flex md:flex-row flex-col items-center justify-between space-x-4 p-4">
         <div>
         <span className="text-gray-500 text-xl">{index <= 9 ? `${index}` : index.slice(-2)}</span>
 
