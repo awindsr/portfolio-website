@@ -14,7 +14,7 @@ export function Hero() {
           <span className="text-[#8fff86]">web developer,</span>
         </h1>
         <p className="text-gray-100 text-[1.4rem] font-nunito md:w-1/2 mt-8 p-5">
-          sculpting digital dreams into reality. With code as my
+          sculpting<span className="text-[#8fff86]"> digital dreams </span>into reality. With code as my
           chisel and pixels as my medium, I bring visions to life, crafting
           <span className="text-[#8fff86]"> immersive online experiences</span> that captivate and inspire.
         </p>
