@@ -145,7 +145,7 @@ function ProjectItem({ index, title, stack, link, year, image, description }) {
             isVisible ? "visible" : ""
           }`}
         >
-          <p>{description}</p>
+          <p className="font-poppins text-[1.2rem] text-[#66ad61]">{description}</p>
         </div>
         <div className="space-x-1">
           <span className="projectYear">{year}</span>
