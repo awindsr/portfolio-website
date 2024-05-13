@@ -40,13 +40,13 @@ export function AboutMe() {
         </div>
         <div className="flex flex-col items-center justify-center space-y-5">
           <div className="flex flex-col sm:flex-row sm:space-x-5 sm:space-y-[-4] space-y-4">
-            <StatItem value="4+" label="Coding experience" />
-            <StatItem value="3+" label="Developing Websites" />
+            <StatItem value="4+" label="Years of Coding Expertise" />
+            <StatItem value="3+" label="Years of Website Development" />
           </div>
-          <div className="flex flex-col sm:flex-row sm:space-x-5 sm:space-y-[-4] space-y-4">
+          <div className="flex flex-col sm:flex-row sm:space-x-8 sm:space-y-[-4] space-y-4">
 
-          <StatItem value="15+" label="Projects" />
-          <StatItem value="345+" label="Coding Hours" />
+          <StatItem value="20+" label="Completed Projects" />
+          <StatItem value="360+" label="Coding Hours" />
           </div>
         </div>
       </div>

@@ -56,17 +56,17 @@ function Footer() {
             </div>
           </div>
           <div className="flex space-x-3">
-            <a href="#">
+            <a href="https://github.com/awindsr" target="__blank">
               <img src="github-mark-white.svg" className="h-[1.3rem] w-[1.3rem]" />
             </a>
-            <a href="#">
+            <a href="https://linkedin.com/in/awindsr" target="__blank">
               <img src="linkedin.png" className="h-[1.3rem] w-[1.3rem]" />
             </a>
           </div>
           
         </div>
         <div className="text-center text-[.8rem]">
-            <p>Designed and Developed by <span className="text-[#8fff86]">Awindsr</span></p>
+            <p>Designed and Developed by <span className="text-[#8fff86]"><a href="https://awindsr.codes">Awindsr</a></span></p>
           </div>
       </footer>
     </div>
