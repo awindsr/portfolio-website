@@ -16,7 +16,12 @@ export function Contact() {
         <button
           className="bg-black px-3 py-2 text-white rounded-full mt-2 w-[12rem] flex justify-around items-center"
           onClick={() => {
-            window.open("AwinDas R.pdf", "_blank");
+            const link = document.createElement('a');
+            link.href = "AwinDas R.pdf";
+            link.setAttribute('download', 'AwinDas R - Resume.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
           }}
         >
           Download resume <i className="fa fa-download" aria-hidden="true"></i>
